@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export const Counter = () => {
   const dispatch = useDispatch()
-  const  count  = useSelector(state => state)
+  const  {count}  = useSelector(state => state)
 
   const Increment = () => {
     dispatch({
@@ -11,8 +11,9 @@ export const Counter = () => {
     })
   }
   const Decrement = () => {
+   
     dispatch({
-      type: 'Decrement'
+      type: 'Decrement'    
     })
   }
   return (
